@@ -1,7 +1,7 @@
 
 resource "aws_instance" "instances" {
-  ami           = var.ami           
-  instance_type = var.instance_type 
+  ami           = var.ami
+  instance_type = var.instance_type
 
   count     = 2
   subnet_id = aws_subnet.subnets["${var.instances[count.index].subnet}"].id
