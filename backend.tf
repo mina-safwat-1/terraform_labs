@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     bucket       = "terraform-state-bucket-mina-123"
     region       = "us-east-1"
-    key          = "terraform.tfstate"
+    key          = "terraform-lab3.tfstate"
     use_lockfile = true
   }
 
