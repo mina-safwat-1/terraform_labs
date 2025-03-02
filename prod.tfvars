@@ -1,4 +1,3 @@
-ami            = "ami-06ee6255945a96aba"
 instance_type  = "t2.micro"
 region         = "eu-central-1"
 profile        = "default"

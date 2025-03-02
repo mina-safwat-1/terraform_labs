@@ -1,7 +1,7 @@
 
 resource "aws_db_subnet_group" "db_subnet_group" {
   name       = "subnet_group_rds"
-  subnet_ids = [aws_subnet.subnets["priv_subnet_1"].id, aws_subnet.subnets["priv_subnet_2"].id]
+  subnet_ids = [module.network_module.subnets["priv_subnet_1"].id, module.network_module.subnets["priv_subnet_2"].id]
 
   tags = {
     Name = "My DB subnet group"

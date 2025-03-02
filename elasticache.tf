@@ -2,7 +2,7 @@
 
 resource "aws_elasticache_subnet_group" "elasticache_subnet_group" {
   name       = "tf-test-cache-subnet"
-  subnet_ids = [aws_subnet.subnets["priv_subnet_1"].id, aws_subnet.subnets["priv_subnet_2"].id]
+  subnet_ids = [module.network_module.subnets["priv_subnet_1"].id, module.network_module.subnets["priv_subnet_2"].id]
 }
 
 

@@ -1,7 +1,3 @@
-variable "ami" {
-  type = string
-}
-
 variable "instance_type" {
   type = string
 }
@@ -29,6 +25,7 @@ variable "subnets" {
     name       = string
     cidr_block = string
     type       = string
+    az         = string
   }))
 
 }
