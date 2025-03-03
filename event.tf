@@ -1,10 +1,10 @@
 # S3 Event Trigger for Lambda
 resource "aws_s3_bucket_notification" "s3_trigger" {
-  bucket = "terraform-state-bucket-mina-123"  # Replace with your bucket name
+  bucket = "terraform-state-bucket-mina-123" # Replace with your bucket name
 
   lambda_function {
-    lambda_function_arn = aws_lambda_function.lambda_terraform_s3_ses.arn
-    events              = ["s3:ObjectCreated:Put", "s3:ObjectCreated:Post"]  # Only trigger on PUT & POST
+    lambda_function_arn = aws_lambda_function.lambdaterraform_s3_ses.arn
+    events              = ["s3:ObjectCreated:Put", "s3:ObjectCreated:Post"] # Only trigger on PUT & POST
   }
 
   depends_on = [aws_lambda_permission.allow_s3_invoke]

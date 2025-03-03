@@ -29,3 +29,9 @@ resource "aws_iam_role_policy_attachment" "attach_s3_cloudwatch" {
   role       = aws_iam_role.lambda-s3-ses-role.name
   policy_arn = aws_iam_policy.cloudwatch_s3_policy_lambda.arn
 }
+
+# Attach policy to allow writing logs
+resource "aws_iam_role_policy_attachment" "lambda_logging" {
+  role       = aws_iam_role.lambda-s3-ses-role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
