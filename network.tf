@@ -1,5 +1,5 @@
 module "network_module" {
-  source         = "./network_module"
+  source         = "mina-safwat-1/network/aws"
   vpc_cidr_block = var.vpc_cidr_block
   subnets        = var.subnets
   region         = var.region
