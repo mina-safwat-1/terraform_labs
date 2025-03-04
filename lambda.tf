@@ -15,9 +15,4 @@ resource "aws_lambda_function" "lambdaterraform_s3_ses" {
   timeout          = 60
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
-  environment {
-    variables = {
-      foo = "bar"
-    }
-  }
 }
